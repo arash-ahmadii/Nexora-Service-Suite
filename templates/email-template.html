@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Service Suite Email Template</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f8f9fa; 
+            line-height: 1.6; 
+        }
+        
+        .email-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .email-header {
+            background-color: #273269;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            margin-bottom: 25px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .header-subtitle {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+        
+        .email-content {
+            padding: 50px 40px;
+            line-height: 1.7;
+        }
+        
+        .greeting {
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        
+        .greeting h2 {
+            color: #2c3e50;
+            margin: 0 0 25px 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .main-message {
+            margin-bottom: 35px;
+            line-height: 1.7;
+            color: #34495e;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .dynamic-content {
+            margin-bottom: 35px;
+        }
+        
+        .action-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #273269 0%, #34495e 100%);
+            color: #ffffff;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 50, 105, 0.3);
+        }
+        
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(39, 50, 105, 0.4);
+            background: linear-gradient(135deg, #34495e 0%, #273269 100%);
+        }
+        
+        .footer-message {
+            margin-top: 45px;
+            padding-top: 35px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .email-footer {
+            background-color: #273269;
+            padding: 40px 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info h3 {
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item {
+            text-align: left;
+        }
+        
+        .contact-item > div {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item span:first-child {
+            font-size: 18px;
+        }
+        
+        .contact-item span:last-child {
+            font-weight: 500;
+        }
+        
+        .social-links {
+            margin-bottom: 30px;
+        }
+        
+        .social-links h4 {
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .social-button {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .social-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.9;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Content Specific Styles */
+        .info-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-box h3 {
+            color: #273269;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .info-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #273269;
+            font-size: 15px;
+        }
+        
+        .info-value {
+            color: #495057;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .status-badge.old {
+            background-color: #e74c3c;
+            border: 2px solid #c0392b;
+        }
+        
+        .status-badge.new {
+            background-color: #27ae60;
+            border: 2px solid #229954;
+        }
+        
+        .customer-account-info {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d1ecf1 100%);
+            border: 2px solid #bee5eb;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .customer-account-info h3 {
+            color: #0c5460;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .account-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .account-detail {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+        
+        .account-detail-label {
+            font-weight: 600;
+            color: #0c5460;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .account-detail-value {
+            color: #495057;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .dashboard-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #273269 0%, #34495e 100%);
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 50, 105, 0.3);
+        }
+        
+        .dashboard-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 50, 105, 0.4);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .email-container {
+                max-width: 100%;
+                border-radius: 0;
+            }
+            
+            .email-content {
+                padding: 30px 20px;
+            }
+            
+            .email-header,
+            .email-footer {
+                padding: 30px 20px;
+            }
+            
+            .contact-grid,
+            .account-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        
+        <!-- Header -->
+        <div class="email-header">
+            <div class="logo">
+                <img src="assets/images/eccoripair.webp" alt="Nexora Service Suite">
+            </div>
+            <div class="header-subtitle">
+                Qualitätsdienstleistungen zu fairen Preisen
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="email-content">
+            <div class="greeting">
+                <h2>Guten Tag</h2>
+            </div>
+            
+            <div class="main-message">
+                Dies ist eine Beispiel-E-Mail, die das neue Design des Nexora Service Suite Email-Templates zeigt.
+            </div>
+            
+            <!-- Example: Customer Welcome Content -->
+            <div class="customer-account-info">
+                <h3>👋 Willkommen in der Nexora Service Suite Familie!</h3>
+                <p>Ihr Konto wurde erfolgreich erstellt und Sie können sich ab sofort in unserem System anmelden.</p>
+                <div class="account-details">
+                    <div class="account-detail">
+                        <div class="account-detail-label">Benutzername:</div>
+                        <div class="account-detail-value">max.mustermann</div>
+                    </div>
+                    <div class="account-detail">
+                        <div class="account-detail-label">E-Mail:</div>
+                        <div class="account-detail-value">max@example.com</div>
+                    </div>
+                </div>
+                <a href="https://nexora.at/my-account/" class="dashboard-link">
+                    🚀 Zu meinem Dashboard
+                </a>
+            </div>
+            
+            <!-- Example: Status Change Content -->
+            <div class="info-box">
+                <h3>🔄 Service-Statusänderung</h3>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Anfrage-Nummer:</span>
+                        <span class="info-value">#12345</span>
+                    </li>
+                    <li>
+                        <span class="info-label">Änderungsdatum:</span>
+                        <span class="info-value">15.12.2024 14:30</span>
+                    </li>
+                </ul>
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="font-weight: 600; color: #273269; margin-bottom: 10px; font-size: 16px;">Vorheriger Status:</div>
+                        <span class="status-badge old">In Bearbeitung</span>
+                    </div>
+                    <div style="font-size: 24px; color: #273269; margin: 20px 0;">⬇️</div>
+                    <div>
+                        <div style="font-weight: 600; color: #273269; margin-bottom: 10px; font-size: 16px;">Neuer Status:</div>
+                        <span class="status-badge new">Fertig</span>
+                    </div>
+                </div>
+                
+                <div style="background-color: #f8f9fa; border-left: 4px solid #273269; padding: 15px; margin-top: 20px; border-radius: 0 8px 8px 0;">
+                    <div style="font-weight: 600; color: #273269; margin-bottom: 8px;">📝 Beschreibung:</div>
+                    <div style="color: #495057; line-height: 1.6;">Ihre Reparatur wurde erfolgreich abgeschlossen und ist zur Abholung bereit.</div>
+                </div>
+            </div>
+            
+            <!-- Action Button -->
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://nexora.at/my-account/" class="action-button">
+                    🔍 Status überprüfen
+                </a>
+            </div>
+            
+            <div class="footer-message">
+                Für weitere Informationen und den aktuellen Status Ihrer Anfrage besuchen Sie bitte Ihr Benutzerpanel.
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="email-footer">
+            <div class="contact-info">
+                <h3>📞 Kontaktinformationen</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div>
+                            <span>📞</span>
+                            <span>+43 1 234 5678</span>
+                        </div>
+                        <div>
+                            <span>📧</span>
+                            <span>info@nexora.at</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div>
+                            <span>🌐</span>
+                            <span>https://nexora.at</span>
+                        </div>
+                        <div>
+                            <span>📍</span>
+                            <span>Wien, Österreich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <h4>📱 Folge uns auf Social Media</h4>
+                <div class="social-buttons">
+                    <a href="#" class="social-button">
+                        📷 Instagram
+                    </a>
+                    <a href="#" class="social-button">
+                        📱 Telegram
+                    </a>
+                    <a href="#" class="social-button">
+                        💬 WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Nexora. Alle Rechte vorbehalten.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

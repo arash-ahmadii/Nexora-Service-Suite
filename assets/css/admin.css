@@ -1,0 +1,1920 @@
+
+.Nexora Service Suite-admin {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px #f4f7fc;
+    padding: 32px 24px;
+    margin: 32px 0;
+    font-family: inherit;
+}
+.Nexora Service Suite-admin h1, .Nexora Service Suite-admin h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-btn-primary {
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(124,58,237,0.08);
+    border: none;
+    transition: background 0.2s;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-btn-primary:hover {
+    background: #fff;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-form-group label {
+    color: #444;
+    font-weight: 600;
+}
+.Nexora Service Suite-admin input, .Nexora Service Suite-admin select, .Nexora Service Suite-admin textarea {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fcfcfc;
+    color: #222;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-form-group {
+    margin-bottom: 18px;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-form-actions {
+    margin-top: 24px;
+}
+
+.Nexora Service Suite-admin {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Nexora Service Suite-admin h1 {
+    color: #1d2327;
+}
+
+.Nexora Service Suite-search-box {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.Nexora Service Suite-search-box input {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.Nexora Service Suite-pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Nexora Service Suite-pagination #Nexora Service Suite-page-info {
+    padding: 0 10px;
+}
+
+.Nexora Service Suite-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.Nexora Service Suite-modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1200px;
+    max-height: 95vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+    position: relative;
+}
+
+#Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content {
+    max-width: 80%;
+    max-height: 65vh;
+    width: 80%;
+    margin: 10% auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.Nexora Service Suite-modal-header {
+    background: rgb(196, 196, 196)8a8;
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.Nexora Service Suite-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Nexora Service Suite-close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.Nexora Service Suite-close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Nexora Service Suite-modal-body {
+    padding: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.Nexora Service Suite-modal-footer {
+    padding: 20px 25px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-radius: 0 0 12px 12px;
+}
+
+.logs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.log-entry {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.log-entry:hover {
+    background: #fff;
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.log-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.log-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.log-action {
+    font-weight: 600;
+    color: #495057;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.log-date {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-left: auto;
+}
+
+.log-description {
+    color: #212529;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.log-user {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.log-old-value,
+.log-new-value {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.log-old-value {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.log-new-value {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.log-ip {
+    color: #6c757d;
+    font-size: 0.8rem;
+    font-family: monospace;
+    margin-top: 5px;
+}
+
+.no-logs {
+    text-align: center;
+    color: #6c757d;
+    padding: 40px 20px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .Nexora Service Suite-modal-content {
+        width: 96%;
+        margin: 3% auto;
+        max-width: none;
+    }
+    
+    .Nexora Service Suite-modal-header {
+        padding: 15px 20px;
+    }
+    
+    .Nexora Service Suite-modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .Nexora Service Suite-modal-body {
+        padding: 20px;
+    }
+    
+    .Nexora Service Suite-modal-footer {
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+    
+    .log-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .log-date {
+        margin-left: 0;
+    }
+}
+
+.Nexora Service Suite-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.Nexora Service Suite-modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.Nexora Service Suite-modal-body::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.Nexora Service Suite-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.Nexora Service Suite-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.Nexora Service Suite-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.Nexora Service Suite-modal-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.Nexora Service Suite-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.wp-list-table th, .wp-list-table td {
+    vertical-align: middle;
+}
+
+.row-actions {
+    visibility: hidden;
+}
+
+tr:hover .row-actions {
+    visibility: visible;
+}
+
+  
+  .Nexora Service Suite-modal-header {
+    padding: 15px;
+    background: #f1f1f1;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .Nexora Service Suite-modal-body {
+    padding: 15px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+
+.wrap {
+    background: #f5f8fc;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.wp-header-end {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wp-heading-inline {
+    color: #2500d73b;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.page-title-action {
+    background: #cbcbcb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.page-title-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.wp-list-table {
+    background: #2d2d2d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid #404040;
+}
+
+.wp-list-table th {
+    background: #404040;
+    color: #00017842;
+    border-bottom: 2px solid #667eea;
+    padding: 16px 12px;
+    font-weight: 600;
+}
+
+.wp-list-table td {
+    background: #fff !important;
+    color: #e0e0e0;
+    border-bottom: 1px solid #404040;
+    padding: 16px 12px;
+    vertical-align: middle;
+}
+
+.wp-list-table tr:hover {
+    background: #353535;
+}
+
+.wp-list-table tr:nth-child(even) {
+    background: #262626;
+}
+
+.wp-list-table tr:nth-child(even):hover {
+    background: #353535;
+}
+
+.button, .button-primary {
+    background: linear-gradient(135deg, #888, #666);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    cursor: pointer;
+}
+
+.button:hover, .button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.button-secondary {
+    background: #404040;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+.button-secondary:hover {
+    background: #505050;
+    color: #ffffff;
+}
+
+.form-table {
+    background: #2d2d2d;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid #404040;
+}
+
+.form-table th {
+    color: #00017842;
+    font-weight: 600;
+    padding: 16px 20px 16px 0;
+    vertical-align: top;
+    width: 200px;
+}
+
+.form-table td {
+    padding: 16px 0;
+    color: #e0e0e0;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+    background: #404040;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+input[type="number"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    background: #505050;
+}
+
+.postbox {
+    background: #2d2d2d;
+    border: 1px solid #404040;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.postbox .hndle {
+    background: #404040;
+    color: #00017842;
+    border-bottom: 2px solid #667eea;
+    padding: 16px 20px;
+    font-weight: 600;
+    border-radius: 12px 12px 0 0;
+}
+
+.postbox .inside {
+    padding: 20px;
+    color: #e0e0e0;
+}
+
+.tablenav {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #404040;
+}
+
+.tablenav-pages {
+    color: #00017842;
+}
+
+.tablenav-pages a {
+    color: #667eea;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.tablenav-pages a:hover {
+    background: #404040;
+    color: #ffffff;
+}
+
+.notice {
+    background: #2d2d2d;
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+}
+
+.notice-success {
+    border-left-color: #4caf50;
+}
+
+.notice-error {
+    border-left-color: #f44336;
+}
+
+.notice-warning {
+    border-left-color: #ff9800;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+.status-active {
+    background: #4caf50;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-inactive {
+    background: #f44336;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dashicons {
+    color: #667eea;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        padding: 16px;
+    }
+    
+    .form-table th {
+        width: 100%;
+        display: block;
+        padding-bottom: 8px;
+    }
+    
+    .form-table td {
+        padding-top: 8px;
+    }
+    
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"], 
+    input[type="number"],
+    input[type="url"],
+    textarea,
+    select {
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.postbox, .form-table, .wp-list-table {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+input[type="checkbox"] {
+    background: #404040;
+    border: 1px solid #555;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+input[type="radio"] {
+    background: #404040;
+    border: 1px solid #555;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+h1.wp-heading-inline {
+    color: #00017842 !important;
+}
+thead {
+    background: #00017842 !important;
+    color: #222 !important;
+}
+th {
+    color: #00017842 !important;
+}
+
+.Nexora Service Suite-admin-header {
+    margin-bottom: 32px;
+}
+.Nexora Service Suite-dashboard-nav {
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 4px 24px rgba(76,110,245,0.08);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.Nexora Service Suite-nav-item {
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #6c63ff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    position: relative;
+}
+.Nexora Service Suite-nav-item i {
+    font-size: 14px;
+}
+.Nexora Service Suite-nav-item.active {
+    background: #6c63ff;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.3);
+}
+.Nexora Service Suite-nav-item:hover:not(.active) {
+    background: #eaf0ff;
+    color: #6c63ff;
+}
+.Nexora Service Suite-nav-item .badge {
+    background: #ff6f91;
+    color: #fff;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 8px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    min-width: 18px;
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    .Nexora Service Suite-dashboard-nav {
+        flex-wrap: wrap;
+    }
+    .Nexora Service Suite-nav-item {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .Nexora Service Suite-nav-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .Nexora Service Suite-nav-item i {
+        display: none;
+    }
+}
+
+body.wp-admin .Nexora Service Suite-admin, .Nexora Service Suite-admin {
+    background: #f6f8fc !important;
+    color: #222 !important;
+    font-family: 'Inter', 'Vazirmatn', Arial, sans-serif;
+}
+
+.Nexora Service Suite-admin .wrap, .Nexora Service Suite-admin .wp-heading-inline {
+    background: transparent !important;
+    color: #6c63ff !important;
+}
+
+.Nexora Service Suite-admin table.wp-list-table {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(76, 110, 245, 0.08);
+    overflow: hidden;
+}
+
+.Nexora Service Suite-admin thead {
+    background: #f4f7ff !important;
+    color: #6c63ff !important;
+    border-bottom: 2px solid #e3e8f7;
+}
+
+.Nexora Service Suite-admin th, .Nexora Service Suite-admin td {
+    color: #222 !important;
+    border-color: #e3e8f7 !important;
+    font-size: 1rem;
+}
+
+.Nexora Service Suite-admin tr {
+    background: #fff;
+    transition: background 0.2s;
+}
+.Nexora Service Suite-admin tr:nth-child(even) {
+    background: #f4f7ff;
+}
+.Nexora Service Suite-admin tr:hover {
+    background: #eaf0ff;
+}
+.Nexora Service Suite-admin .button, .Nexora Service Suite-admin .button-primary {
+    background: #6c63ff;
+    color: #fff !important;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 28px;
+    margin: 0 2px;
+    box-shadow: 0 2px 8px rgba(76, 110, 245, 0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.Nexora Service Suite-admin .button:hover, .Nexora Service Suite-admin .button-primary:hover {
+    background: #4f8cff;
+    color: #fff !important;
+}
+.Nexora Service Suite-admin .page-title-action {
+    background: #ffb347;
+    color: #fff !important;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.08);
+}
+.Nexora Service Suite-admin .Nexora Service Suite-search-box input[type="text"] {
+    background: #fff;
+    color: #222;
+    border: 1px solid #e3e8f7;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-left: 8px;
+}
+.Nexora Service Suite-admin .Nexora Service Suite-search-box button {
+    background: #6c63ff;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+}
+.Nexora Service Suite-modal-content {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(76, 110, 245, 0.12);
+    max-width: 420px;
+    width: 95vw;
+    margin: 60px auto;
+    padding: 36px 32px 28px 32px;
+    position: relative;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.Nexora Service Suite-modal-content h2 {
+    color: #6c63ff;
+    font-size: 1.7rem;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 0;
+}
+.Nexora Service Suite-modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #6c63ff;
+    font-size: 1rem;
+}
+.Nexora Service Suite-modal-content input[type="text"],
+.Nexora Service Suite-modal-content input[type="email"],
+.Nexora Service Suite-modal-content input[type="password"],
+.Nexora Service Suite-modal-content select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e3e8f7;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    font-size: 1.08rem;
+    background: #f6f8fc;
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(76, 110, 245, 0.04);
+}
+.Nexora Service Suite-modal-content input:focus,
+.Nexora Service Suite-modal-content select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+.Nexora Service Suite-modal-content .Nexora Service Suite-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+.Nexora Service Suite-modal-content button.button-primary,
+.Nexora Service Suite-modal-content button.button {
+    min-width: 120px;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-size: 1.08rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 12px rgba(255,179,71,0.10);
+    background: #6c63ff;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.Nexora Service Suite-modal-content button.button-primary:hover,
+.Nexora Service Suite-modal-content button.button:hover {
+    background: #4f8cff;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(76, 110, 245, 0.18);
+}
+.Nexora Service Suite-close-modal {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.Nexora Service Suite-close-modal:hover {
+    color: #6c63ff;
+}
+#Nexora Service Suite-add-user-message, #Nexora Service Suite-edit-user-message, #Nexora Service Suite-add-role-message {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.Nexora Service Suite-modal-content select, .Nexora Service Suite-admin select {
+    background: #181c2f;
+    color: #fff;
+    border: 1px solid #282e4a;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(95,114,255,0.08);
+}
+.Nexora Service Suite-modal-content select:focus, .Nexora Service Suite-admin select:focus {
+    border-color: #00017842;
+}
+
+.Nexora Service Suite-modal-content input[type="checkbox"] {
+    accent-color: #00017842;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.Nexora Service Suite-pagination button {
+    background: #232946;
+    color: #00017842;
+    border: 1px solid #282e4a;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 0 2px;
+}
+.Nexora Service Suite-pagination button:disabled {
+    opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+    .Nexora Service Suite-modal-content {
+        width: 98%;
+        margin: 2% auto;
+        max-width: none;
+        padding: 16px 6px 12px 6px;
+        max-height: 98vh;
+    }
+    .Nexora Service Suite-modal-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    .Nexora Service Suite-modal-content input[type="text"],
+    .Nexora Service Suite-modal-content input[type="email"],
+    .Nexora Service Suite-modal-content input[type="password"],
+    .Nexora Service Suite-modal-content select {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+    .Nexora Service Suite-admin table.wp-list-table {
+        font-size: 0.95rem;
+    }
+    
+    
+    #Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 5% auto;
+        max-height: 90vh;
+        padding: 10px;
+    }
+    
+    #Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    #Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content .customer-info-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    #Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content .customer-section {
+        margin-top: 15px;
+        padding: 10px;
+    }
+    
+    #Nexora Service Suite-customer-details-modal .Nexora Service Suite-modal-content .customer-section h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+.Nexora Service Suite-modern-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.search-box:focus-within {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #2563eb;
+}
+
+.search-box input {
+    padding: 0.875rem 1rem;
+    padding-right: 3rem;
+    border: none;
+    border-radius: 0;
+    font-size: 0.875rem;
+    min-width: 300px;
+    background: transparent;
+    color: #1f2937;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.search-btn {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2563eb;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    background: rgba(37, 99, 235, 0.1);
+    transform: scale(1.05);
+}
+
+.search-icon {
+    font-size: 1rem;
+}
+
+.Nexora Service Suite-modern-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.table-info {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.Nexora Service Suite-table-wrapper {
+    overflow-x: auto;
+}
+
+.Nexora Service Suite-modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.Nexora Service Suite-modern-table th {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.Nexora Service Suite-modern-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+}
+
+.Nexora Service Suite-modern-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.loading-row {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.Nexora Service Suite-modern-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.pagination-info {
+    font-size: 0.875rem;
+    color: #6b7280;
+    min-width: 120px;
+    text-align: center;
+}
+
+.Nexora Service Suite-modern-form-section {
+    margin-top: 2rem;
+}
+
+.Nexora Service Suite-modern-form-section .Nexora Service Suite-modern-table-container {
+    margin-top: 1rem;
+}
+
+.Nexora Service Suite-modern-form-section .table-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.Nexora Service Suite-modern-form-section .form-row {
+    margin-bottom: 1rem;
+}
+
+.Nexora Service Suite-modern-form-section .form-row label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.Nexora Service Suite-modern-form-section .form-row input,
+.Nexora Service Suite-modern-form-section .form-row select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.Nexora Service Suite-modern-form-section .form-row input:focus,
+.Nexora Service Suite-modern-form-section .form-row select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.Nexora Service Suite-modern-form-section .form-row button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.Nexora Service Suite-modern-form-section .form-row button.button-primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: white;
+}
+
+.Nexora Service Suite-modern-form-section .form-row button.button-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.Nexora Service Suite-modern-form-section .form-row button.button {
+    background: #6b7280;
+    border-color: #6b7280;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.Nexora Service Suite-modern-form-section .form-row button.button:hover {
+    background: #4b5563;
+    border-color: #4b5563;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+}
+
+.view-btn {
+    background: #059669;
+    color: white;
+}
+
+.view-btn:hover {
+    background: #047857;
+    transform: scale(1.05);
+}
+
+.approve-btn {
+    background: #059669;
+    color: white;
+}
+
+.approve-btn:hover {
+    background: #047857;
+    transform: scale(1.05);
+}
+
+.reject-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.reject-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+}
+
+.modern-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    background: white;
+    min-width: 150px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modern-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.customer-type-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.user-status-label span {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+  
+
+.compact-modal {
+    max-width: 480px !important;
+    width: 98vw;
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.18);
+    background: #fff;
+}
+.compact-modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f6f7fb;
+    border-radius: 16px 16px 0 0;
+    padding: 18px 24px 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececf0;
+}
+.compact-modal-header h2 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #6c63ff;
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+.compact-modal-body {
+    padding: 18px 24px 12px 24px;
+    overflow-y: auto;
+    max-height: 60vh;
+    min-height: 120px;
+    background: #fff;
+}
+.compact-modal-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    background: #f6f7fb;
+    border-radius: 0 0 16px 16px;
+    padding: 14px 24px 14px 24px;
+    border-top: 1px solid #ececf0;
+    display: flex;
+    justify-content: flex-end;
+}
+.compact-modal .form-group {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.compact-modal .form-group label {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 4px;
+}
+.compact-modal .form-group input,
+.compact-modal .form-group select {
+    font-size: 0.98rem;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 1.2px solid #e3e8f7;
+    background: #f6f8fc;
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(76, 110, 245, 0.04);
+}
+.compact-modal .form-group input:focus,
+.compact-modal .form-group select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+.compact-modal .button.button-primary {
+    min-width: 120px;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border: none;
+    background: #6c63ff;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+}
+.compact-modal .button.button-primary:hover {
+    background: #4f8cff;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(76, 110, 245, 0.18);
+}
+.compact-modal .Nexora Service Suite-close-modal {
+    color: #6c63ff;
+    font-size: 1.7rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+.compact-modal .Nexora Service Suite-close-modal:hover {
+    background-color: #ececf0;
+}
+@media (max-width: 600px) {
+    .compact-modal {
+        max-width: 100vw !important;
+        border-radius: 0;
+    }
+    .compact-modal-header, .compact-modal-footer, .compact-modal-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .compact-modal-body {
+        max-height: 60vh;
+    }
+}
+  
+
+.user-status-select {
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1.2px solid #e3e8f7;
+    background: #fffbe7;
+    color: #b45309;
+    transition: background 0.2s, color 0.2s;
+    padding: 7px 12px;
+}
+.user-status-select.status-pending {
+    background: #fffbe7;
+    color: #b45309;
+}
+.user-status-select.status-approved {
+    background: #e6fbe8;
+    color: #059669;
+}
+.user-status-select.status-rejected {
+    background: #fee2e2;
+    color: #dc2626;
+}
+.user-status-select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+.user-status-select option[value=""] {
+    background: #fffbe7;
+    color: #b45309;
+}
+.user-status-select option[value="yes"] {
+    background: #e6fbe8;
+    color: #059669;
+}
+.user-status-select option[value="no"] {
+    background: #fee2e2;
+    color: #dc2626;
+}
+  
+
+.user-customer-type-select {
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1.2px solid #e3e8f7;
+    background: #f1f5ff;
+    color: #2563eb;
+    transition: background 0.2s, color 0.2s;
+    padding: 7px 12px;
+}
+.user-customer-type-select.type-business {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.user-customer-type-select.type-private {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+.user-customer-type-select.type-unset {
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+.user-customer-type-select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+.user-customer-type-select option[value="business"] {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.user-customer-type-select option[value="private"] {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+.user-customer-type-select option[value=""] {
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+  
+
+.user-role-select {
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1.2px solid #e3e8f7;
+    background: #f3f4f6;
+    color: #6b7280;
+    transition: background 0.2s, color 0.2s;
+    padding: 7px 12px;
+}
+.user-role-select.role-subscriber {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+.user-role-select.role-customer {
+    background: #e6fbe8;
+    color: #059669;
+}
+.user-role-select.role-editor {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.user-role-select.role-author {
+    background: #fef3c7;
+    color: #ea580c;
+}
+.user-role-select.role-contributor {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+.user-role-select.role-shop_manager {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+.user-role-select.role-administrator {
+    background: #fee2e2;
+    color: #dc2626;
+}
+.user-role-select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+.user-role-select option[value="subscriber"] {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+.user-role-select option[value="customer"] {
+    background: #e6fbe8;
+    color: #059669;
+}
+.user-role-select option[value="editor"] {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.user-role-select option[value="author"] {
+    background: #fef3c7;
+    color: #ea580c;
+}
+.user-role-select option[value="contributor"] {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+.user-role-select option[value="shop_manager"] {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+.user-role-select option[value="administrator"] {
+    background: #fee2e2;
+    color: #dc2626;
+}
+  
+
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content {
+    max-width: 420px;
+    border-radius: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(60,60,120,0.18);
+    background: #fff;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content h2 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #6c63ff;
+    margin: 0;
+    letter-spacing: 0.2px;
+    padding: 18px 24px 12px 24px;
+    border-radius: 16px 16px 0 0;
+    background: #f6f7fb;
+    border-bottom: 1px solid #ececf0;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content form {
+    padding: 18px 24px 32px 24px;
+    overflow-y: auto;
+    max-height: 60vh;
+    min-height: 120px;
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content .form-group,
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content p {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content label {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 4px;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content input,
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content select {
+    font-size: 0.98rem;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 1.2px solid #e3e8f7;
+    background: #f6f8fc;
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(76, 110, 245, 0.04);
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content input:focus,
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 0 2px #6c63ff33;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content button.button-primary {
+    min-width: 120px;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border: none;
+    background: #6c63ff;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+    margin-top: 18px;
+}
+#Nexora Service Suite-role-modal .Nexora Service Suite-modal-content button.button-primary:hover {
+    background: #4f8cff;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(76, 110, 245, 0.18);
+}
+@media (max-width: 600px) {
+    #Nexora Service Suite-role-modal .Nexora Service Suite-modal-content {
+        max-width: 100vw !important;
+        border-radius: 0;
+    }
+    #Nexora Service Suite-role-modal .Nexora Service Suite-modal-content h2,
+    #Nexora Service Suite-role-modal .Nexora Service Suite-modal-content form {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #Nexora Service Suite-role-modal .Nexora Service Suite-modal-content form {
+        max-height: 60vh;
+        padding-bottom: 48px;
+    }
+}
+
+.Nexora Service Suite-service-status-color-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Nexora Service Suite-service-status-color-picker input[type="color"] {
+    width: 50px;
+    height: 35px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+}
+
+.Nexora Service Suite-service-status-color-picker input[type="color"]:hover {
+    border-color: #0073aa;
+}
+
+.Nexora Service Suite-service-status-color-picker input[type="color"]:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+}
+
+.Nexora Service Suite-service-status-color-picker .description {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.status-color-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.status-color-value {
+    font-size: 12px;
+    color: #666;
+    font-family: monospace;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Nexora Service Suite-approval-banner {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.status-dropdown-colored {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    background: #fff;
+    cursor: pointer;
+    min-width: 120px;
+    transition: border-color 0.2s ease;
+}
+
+.status-dropdown-colored:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.2);
+}
+
+.status-dropdown-colored option {
+    padding: 8px 12px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.status-dropdown-colored {
+    background-color: var(--current-status-color, #0073aa);
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.status-display-with-color {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status-color-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.status-dropdown {
+    font-size: 11px;
+    padding: 2px 4px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #f9f9f9;
+}
+
+.Nexora Service Suite-status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin: 4px 0;
+}
+
+.Nexora Service Suite-status-badge.small {
+    padding: 3px 8px;
+    font-size: 11px;
+    min-width: 70px;
+}
+  

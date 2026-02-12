@@ -1,0 +1,656 @@
+
+
+.send-approval-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.send-approval-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.send-approval-btn:active {
+    transform: translateY(0);
+}
+
+.send-approval-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.send-approval-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.send-approval-btn.status-none {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.send-approval-btn.status-none:hover {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+}
+
+.send-approval-btn.status-pending {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    box-shadow: 0 2px 4px rgba(251, 191, 36, 0.3);
+}
+
+.send-approval-btn.status-pending:hover {
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.5);
+}
+
+.send-approval-btn.status-approved {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.send-approval-btn.status-approved:hover {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+}
+
+.send-approval-btn.status-rejected {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.send-approval-btn.status-rejected:hover {
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5);
+}
+
+.service-row {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin: 4px 0;
+}
+
+.service-row.status-pending {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(253, 230, 138, 0.3) 100%);
+    border-left: 4px solid #fbbf24;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+}
+
+.service-row.status-approved {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(167, 243, 208, 0.3) 100%);
+    border-left: 4px solid #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.service-row.status-rejected {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(254, 202, 202, 0.3) 100%);
+    border-left: 4px solid #ef4444;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+}
+
+.service-row.status-none {
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 4px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.service-status-indicator:hover {
+    transform: scale(1.05);
+}
+
+.service-status-indicator.status-pending {
+    background: #fbbf24;
+    color: #92400e;
+}
+
+.service-status-indicator.status-approved {
+    background: #10b981;
+    color: white;
+}
+
+.service-status-indicator.status-rejected {
+    background: #ef4444;
+    color: white;
+}
+
+.service-status-indicator.status-none {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.status-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.status-details-modal .modal-header {
+    padding: 16px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-details-modal .modal-header.warning {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #92400e;
+}
+
+.status-details-modal .modal-header.success {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.status-details-modal .modal-header.error {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.status-details-modal .modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status-details-modal .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.status-details-modal .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.status-details-modal .modal-body {
+    background: white;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.status-details {
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.Nexora Service Suite-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    border-left: 4px solid;
+}
+
+.Nexora Service Suite-notification.show {
+    transform: translateX(0);
+}
+
+.Nexora Service Suite-notification.notification-success {
+    border-left-color: #10b981;
+}
+
+.Nexora Service Suite-notification.notification-error {
+    border-left-color: #ef4444;
+}
+
+.Nexora Service Suite-notification.notification-info {
+    border-left-color: #3b82f6;
+}
+
+.Nexora Service Suite-notification.notification-warning {
+    border-left-color: #f59e0b;
+}
+
+.notification-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.notification-message {
+    flex: 1;
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.service-row {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.service-row.status-pending::before {
+    background: #fbbf24;
+}
+
+.service-row.status-approved::before {
+    background: #10b981;
+}
+
+.service-row.status-rejected::before {
+    background: #ef4444;
+}
+
+.service-row:hover {
+    transform: translateX(4px);
+    transition: transform 0.2s ease;
+}
+
+.service-row.status-pending:hover {
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.service-row.status-approved:hover {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.service-row.status-rejected:hover {
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.send-approval-btn.btn-secondary {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.send-approval-btn.btn-secondary:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.send-approval-btn.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.send-approval-btn.loading::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 6px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .send-approval-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .service-status-indicator {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+    
+    .Nexora Service Suite-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        transform: translateY(-100%);
+    }
+    
+    .Nexora Service Suite-notification.show {
+        transform: translateY(0);
+    }
+    
+    .status-details-modal .modal-body {
+        width: 95%;
+        margin: 10px;
+    }
+}
+
+@media print {
+    .send-approval-btn,
+    .service-status-indicator,
+    .Nexora Service Suite-notification,
+    .status-details-modal {
+        display: none !important;
+    }
+    
+    .service-row {
+        background: white !important;
+        border-left: 1px solid #e2e8f0 !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .service-row.status-pending {
+        background: #fef3c7;
+        border-left-color: #d97706;
+    }
+    
+    .service-row.status-approved {
+        background: #d1fae5;
+        border-left-color: #047857;
+    }
+    
+    .service-row.status-rejected {
+        background: #fee2e2;
+        border-left-color: #b91c1c;
+    }
+    
+    .send-approval-btn {
+        border: 2px solid #1e293b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-row,
+    .send-approval-btn,
+    .Nexora Service Suite-notification,
+    .status-details-modal {
+        transition: none;
+        animation: none;
+    }
+    
+    .service-row:hover {
+        transform: none;
+    }
+    
+    .send-approval-btn:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .service-row {
+        color: #e2e8f0;
+    }
+    
+    .service-row.status-pending {
+        background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+        border-left-color: #fbbf24;
+    }
+    
+    .service-row.status-approved {
+        background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+        border-left-color: #10b981;
+    }
+    
+    .service-row.status-rejected {
+        background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+        border-left-color: #ef4444;
+    }
+    
+    .Nexora Service Suite-notification {
+        background: #1e293b;
+        color: #e2e8f0;
+    }
+    
+    .status-details-modal .modal-body {
+        background: #1e293b;
+        color: #e2e8f0;
+    }
+}
+
+.send-approval-btn:focus,
+.service-status-indicator:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.service-row:focus-within {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.service-row.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-row.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.service-approval-card {
+    background: #f8f9fa;
+    border: 2px solid #0073aa;
+    border-radius: 8px;
+    margin: 10px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.approval-card-header {
+    background: #0073aa;
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #005a87;
+}
+
+.approval-card-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.approval-card-content {
+    padding: 15px;
+}
+
+.service-details {
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.service-details strong {
+    color: #333;
+}
+
+.admin-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.admin-note p {
+    margin: 0;
+    font-size: 14px;
+    color: #856404;
+}
+
+.approval-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.approval-actions .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.approval-actions .btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.approval-actions .btn-success:hover {
+    background: #218838;
+}
+
+.approval-actions .btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.approval-actions .btn-danger:hover {
+    background: #c82333;
+}
+
+.service-approval-summary {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.service-approval-summary h4 {
+    margin: 0 0 12px 0;
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.approval-summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.approval-stat {
+    text-align: center;
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.approval-stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    display: block;
+}
+
+.approval-stat-label {
+    font-size: 12px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+.approval-stat.pending .approval-stat-number {
+    color: #fbbf24;
+}
+
+.approval-stat.approved .approval-stat-number {
+    color: #10b981;
+}
+
+.approval-stat.rejected .approval-stat-number {
+    color: #ef4444;
+}

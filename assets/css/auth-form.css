@@ -1,0 +1,537 @@
+
+.Nexora Service Suite-auth-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: none;
+    border-radius: 12px;
+    box-shadow: none;
+    padding: 40px 32px 32px 32px;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-password-match {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.Nexora Service Suite-password-match:empty {
+    display: none;
+}
+
+.Nexora Service Suite-auth-header {
+    background: none;
+    padding: 0 0 24px 0;
+    border-bottom: none;
+    text-align: left;
+}
+
+.Nexora Service Suite-auth-header h1 {
+    display: none;
+}
+
+.Nexora Service Suite-auth-header p {
+    display: none;
+}
+
+.Nexora Service Suite-auth-tabs {
+    display: flex;
+    border-bottom: 2.5px solid #ddd;
+    background: none;
+    margin-bottom: 32px;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-tab-btn {
+    flex: 1;
+    padding: 16px 0 10px 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 400;
+    color: #888;
+    transition: color 0.2s;
+    border-bottom: 2.5px solid transparent;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-tab-btn.active {
+    color: #111;
+    font-weight: 500;
+    border-bottom: 3.5px solid #111;
+    background: none;
+}
+
+.Nexora Service Suite-tab-btn:not(.active):hover {
+    color: #222;
+}
+
+.Nexora Service Suite-auth-content {
+    padding: 0;
+}
+
+.Nexora Service Suite-form-group {
+    margin-bottom: 24px;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #222;
+    font-size: 19px;
+}
+
+.Nexora Service Suite-form-group input[type="text"],
+.Nexora Service Suite-form-group input[type="email"],
+.Nexora Service Suite-form-group input[type="password"],
+.Nexora Service Suite-form-group input[type="tel"],
+.Nexora Service Suite-form-group select,
+.Nexora Service Suite-form-group textarea {
+    width: 100%;
+    padding: 16px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 18px;
+    background: #fff;
+    color: #222;
+    transition: border-color 0.2s;
+    margin-bottom: 0;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-dropdown-trigger,
+.Nexora Service Suite-dropdown-menu {
+    border-radius: 5px !important;
+}
+
+.Nexora Service Suite-dropdown-menu {
+    border-radius: 0 0 5px 5px !important;
+}
+
+.Nexora Service Suite-custom-dropdown + .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.Nexora Service Suite-form-group.error .Nexora Service Suite-dropdown-trigger {
+    border-color: #dc3545 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.Nexora Service Suite-form-group select {
+    color: #888 !important;
+}
+
+.Nexora Service Suite-form-group select:focus {
+    color: #222 !important;
+}
+
+.Nexora Service Suite-form-group select.selected {
+    color: #222 !important;
+}
+
+.Nexora Service Suite-form-group input:focus,
+.Nexora Service Suite-form-group select:focus,
+.Nexora Service Suite-form-group textarea:focus {
+    outline: none;
+    border-color: #222;
+}
+
+.Nexora Service Suite-form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.Nexora Service Suite-radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.Nexora Service Suite-radio-label,
+.Nexora Service Suite-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #222;
+    font-size: 17px;
+}
+
+.Nexora Service Suite-radio-label input[type="radio"],
+.Nexora Service Suite-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0 8px 0 0;
+}
+
+.Nexora Service Suite-btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f5f5f5;
+    color: #222;
+    margin-top: 16px;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-btn:active,
+.Nexora Service Suite-btn:focus {
+    background: #eaeaea;
+    color: #111;
+}
+
+.Nexora Service Suite-btn-primary {
+    background: #f5f5f5;
+    color: #222;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+}
+
+.Nexora Service Suite-btn-primary:hover {
+    background: #eaeaea;
+    color: #111;
+}
+
+.Nexora Service Suite-btn-secondary {
+    background: #ffa726;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+}
+
+.Nexora Service Suite-btn-secondary:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+.next-step {
+    background: #66bb6a !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+}
+
+.next-step:hover {
+    background: #4caf50 !important;
+    color: #fff !important;
+}
+
+.Nexora Service Suite-register-form button[type="submit"] {
+    background: #2196f3 !important;
+    color: #fff !important;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+}
+
+.Nexora Service Suite-register-form button[type="submit"]:hover {
+    background: #1976d2 !important;
+    color: #fff !important;
+}
+
+.Nexora Service Suite-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Nexora Service Suite-password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.Nexora Service Suite-password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    font-size: 18px;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.Nexora Service Suite-password-toggle:hover {
+    color: #222;
+}
+
+.Nexora Service Suite-eye-icon {
+    display: inline-block;
+}
+
+.Nexora Service Suite-form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.Nexora Service Suite-form-step {
+    display: none;
+}
+
+.Nexora Service Suite-form-step.active {
+    display: block;
+}
+
+.private-customer,
+.business-customer {
+    display: none;
+    margin-top: 20px;
+}
+
+.private-customer.show,
+.business-customer.show {
+    display: block;
+}
+
+.customer-form h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+}
+
+.Nexora Service Suite-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Nexora Service Suite-progress-step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+
+.Nexora Service Suite-progress-step.active {
+    background: #222;
+    color: #fff;
+}
+
+.Nexora Service Suite-progress-step.completed {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.Nexora Service Suite-form-group.error input,
+.Nexora Service Suite-form-group.error select,
+.Nexora Service Suite-form-group.error .Nexora Service Suite-dropdown-trigger {
+    border-color: #dc3545 !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+}
+
+.Nexora Service Suite-form-group.error input:focus,
+.Nexora Service Suite-form-group.error select:focus,
+.Nexora Service Suite-form-group.error .Nexora Service Suite-dropdown-trigger:focus {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.4) !important;
+    outline: none !important;
+}
+
+.Nexora Service Suite-form-group.error input[type="text"],
+.Nexora Service Suite-form-group.error input[type="email"],
+.Nexora Service Suite-form-group.error input[type="password"],
+.Nexora Service Suite-form-group.error input[type="tel"],
+.Nexora Service Suite-form-group.error input[type="url"],
+.Nexora Service Suite-form-group.error textarea {
+    border-color: #dc3545 !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    display: block;
+    padding: 8px 12px;
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 4px;
+    animation: errorFadeIn 0.3s ease-in;
+}
+
+@keyframes errorFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Nexora Service Suite-form-group.error label {
+    color: #dc3545 !important;
+    font-weight: bold !important;
+}
+
+.Nexora Service Suite-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.Nexora Service Suite-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.Nexora Service Suite-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.Nexora Service Suite-password-strength,
+.Nexora Service Suite-password-strength-bar,
+.Nexora Service Suite-password-strength-bar-fill {
+    display: none !important;
+}
+
+.Nexora Service Suite-auth-footer {
+    background: none;
+    padding: 0;
+    text-align: left;
+    border-top: none;
+    color: #888;
+    font-size: 14px;
+    margin-top: 32px;
+}
+
+.Nexora Service Suite-lang-switcher-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    margin-top: 24px;
+    background: none;
+    z-index: 1000;
+    position: relative;
+}
+
+.Nexora Service Suite-tab-content {
+    display: none;
+}
+.Nexora Service Suite-tab-content.active {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .Nexora Service Suite-auth-container {
+        padding: 18px 6px 12px 6px;
+        border-radius: 8px;
+    }
+    .Nexora Service Suite-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .Nexora Service Suite-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.Nexora Service Suite-register-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 28px 0;
+    height: 6px;
+    background: none;
+    font-family: inherit !important;
+}
+.Nexora Service Suite-register-progress-segment {
+    flex: 1;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    margin: 0 2px;
+    transition: background 0.3s;
+}
+.Nexora Service Suite-register-progress-segment.active {
+    background: #888;
+}
+
+.Nexora Service Suite-lang-switcher {
+    background: none;
+    color: #888;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 18px;
+    cursor: pointer;
+    padding: 0 8px;
+    height: 38px;
+    line-height: 38px;
+    transition: color 0.2s;
+    outline: none;
+    box-shadow: none;
+    vertical-align: middle;
+}
+.Nexora Service Suite-lang-switcher:hover, .Nexora Service Suite-lang-switcher:focus {
+    color: #222;
+    background: none;
+}
+
+.Nexora Service Suite-auth-container, .Nexora Service Suite-auth-container *, .Nexora Service Suite-auth-container body {
+    font-family: inherit !important;
+}
+
+.Nexora Service Suite-loading .Nexora Service Suite-btn-primary {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+.Nexora Service Suite-btn-loading-spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-top: 2px solid #888;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

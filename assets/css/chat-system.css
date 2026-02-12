@@ -1,0 +1,523 @@
+
+
+.service-approval-card {
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 15px;
+    max-width: 100%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.approval-card-header h4 {
+    margin: 0 0 10px 0;
+}
+
+.approval-card-content {
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    margin: 5px 0;
+}
+
+.admin-note {
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.admin-note p {
+    margin: 0;
+}
+
+.approval-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.approval-actions .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.approval-actions .btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.approval-actions .btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.Nexora Service Suite-chat-container,
+.Nexora Service Suite-admin-chat-container {
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.chat-header,
+.admin-chat-header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.customer-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.customer-email {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.chat-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.chat-messages,
+.admin-chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 16px;
+    border-bottom: 1px solid;
+    border-color: inherit;
+}
+
+.chat-message,
+.admin-chat-message {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.chat-message.user,
+.admin-chat-message.admin {
+    flex-direction: row-reverse;
+}
+
+.message-avatar,
+.admin-message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.admin-message-avatar {
+    width: 36px;
+    height: 36px;
+}
+
+.message-content,
+.admin-message-content {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    position: relative;
+    border: 1px solid;
+    border-color: inherit;
+}
+
+.message-text,
+.admin-message-text {
+    margin: 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-time,
+.admin-message-time {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.chat-message.user .message-time,
+.admin-chat-message.admin .admin-message-time {
+    text-align: left;
+}
+
+.message-file,
+.admin-message-file {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid;
+    border-color: inherit;
+}
+
+.file-icon {
+    font-size: 16px;
+}
+
+.chat-input-container,
+.admin-chat-input-container {
+    padding: 16px;
+}
+
+.chat-input-wrapper,
+.admin-chat-input-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 24px;
+    padding: 8px 12px;
+}
+
+.file-upload-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.message-input {
+    flex: 1;
+    border: none;
+    background: none;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    max-height: 100px;
+    min-height: 20px;
+    padding: 4px 0;
+}
+
+.send-btn {
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.chat-actions,
+.admin-chat-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.file-name {
+    flex: 1;
+}
+
+.remove-file-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.chat-tools {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-tool-btn {
+    border: 1px solid;
+    border-color: inherit;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.chat-error {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid;
+    border-color: inherit;
+}
+
+.chat-messages::-webkit-scrollbar,
+.admin-chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track,
+.admin-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb,
+.admin-chat-messages::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover,
+.admin-chat-messages::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 2px;
+}
+
+.typing-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-messages,
+    .admin-chat-messages {
+        height: 250px;
+    }
+    
+    .message-content,
+    .admin-message-content {
+        max-width: 85%;
+    }
+    
+    .chat-input-wrapper,
+    .admin-chat-input-wrapper {
+        padding: 6px 10px;
+    }
+    
+    .admin-chat-header {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .chat-actions,
+    .admin-chat-actions {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .chat-tools {
+        justify-content: center;
+    }
+    
+    .approval-actions {
+        flex-direction: column;
+    }
+    
+    .approval-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .Nexora Service Suite-chat-container,
+    .Nexora Service Suite-admin-chat-container {
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+    
+    .chat-header,
+    .admin-chat-header {
+        padding: 12px 16px;
+    }
+    
+    .chat-messages,
+    .admin-chat-messages {
+        height: 200px;
+        padding: 12px;
+    }
+    
+    .chat-input-container,
+    .admin-chat-input-container {
+        padding: 12px;
+    }
+    
+    .message-avatar,
+    .admin-message-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .admin-message-avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.chat-message,
+.admin-chat-message {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-input:focus {
+    outline: none;
+}
+
+.send-btn:focus {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+@media print {
+    .Nexora Service Suite-chat-container,
+    .Nexora Service Suite-admin-chat-container {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .chat-input-container,
+    .admin-chat-input-container {
+        display: none;
+    }
+    
+    .chat-messages,
+    .admin-chat-messages {
+        height: auto;
+        max-height: none;
+    }
+}
